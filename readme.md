@@ -11,7 +11,7 @@ This repository offers a combination of Cairo and Solidity code designed to crea
 The first phase consists in aggregating users deposit and redeem requests from Starknet. Each will pay a fraction of Ethereum L1 Gas fee to participate to the "batch". People that want to deposit will approve and transfer the underlying token of the 4626 strategy and reciprocally, people that want to redeem will approve and transfer the yield token of the strategy .The L1 Gas cost is obtained from an oracle.
 ![Fw](public/phase_1.png)
 
-The second phase consists in sending the batch filled of transaction to the L1. It can happens if the batch is full (enought gas has been paid) or when the governance decides (even if not full). The liquidity is sent to L1 via conninical bridge (starkgate) and a message is sent to the L1 handler. This message contains all the required data that L1 Handler needs to know to interact with the L1 strategy. 
+The second phase consists in sending the batch filled of transaction to the L1. It can happens if the batch is full (enought gas has been paid) or when the governance decides (even if not full). The liquidity is sent to L1 via canonical bridge (starkgate) and a message is sent to the L1 handler. This message contains all the required data that L1 Handler needs to know to interact with the L1 strategy. 
 
 ![Fw](public/phase_2.png)
 
